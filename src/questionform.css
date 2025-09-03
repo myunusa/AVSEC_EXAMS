@@ -1,0 +1,206 @@
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0589bd;
+      padding: 15px 20px;
+      color: #fff;
+      position: relative;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    nav .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #034661;
+      color: white;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('../image/index.jpg') center/cover no-repeat;
+      display: flex;
+      
+    }
+    .hero.center {
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      /* margin-top: -20px; */
+    }
+
+    /* Wider Form */
+    .hero-content.login-box {
+      background: rgba(255,255,255,0.97);
+      padding: 30px;
+      margin-top: -80px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+      width: 80%;
+      max-width: 900px;
+      height: 600px;
+      overflow-y: auto;
+    }
+
+    /* Sticky Title */
+    .hero-content h2 {
+      color: #0589bd;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px 0;
+      z-index: 20;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Sticky Image Section */
+    #img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      position: sticky;
+      top: 60px; /* below the title */
+      background: #fff;
+      z-index: 15;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    #profileDisplay {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      cursor: pointer;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+
+    /* Form Fields */
+    .hero-content textarea,
+    .hero-content input,
+    .hero-content select {
+      width: 95%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+    .hero-content textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* Submit Button */
+    .hero-content button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      background: #0589bd;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      /* Make it sticky at bottom */
+      position: sticky;
+      bottom: 0;
+      z-index: 30;
+    }
+    .hero-content button:hover {
+      background: #034661;
+      transform: translateY(-2px);
+    }
+
+
+    /* Add space below button */
+    .hero-content form {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 40px;
+    }
+
+    .message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0589bd;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        padding: 15px;
+        font-size: 18px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .hero-content.login-box {
+        width: 95%;
+        height: auto;
+      }
+    }

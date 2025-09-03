@@ -1,0 +1,137 @@
+ /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+    }
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0589bd;
+      padding: 15px 20px;
+      color: #fff;
+      position: relative;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    nav .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #034661;
+      color: white;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('../image/index.jpg') center/cover no-repeat;
+      display: flex;
+    }
+
+    /* For Add User page - center alignment */
+    .hero.center {
+      justify-content: center;   /* Center horizontally */
+      align-items: center;       /* Center vertically */
+      padding: 0;
+    }
+    .hero-content.login-box {
+      background: rgba(255,255,255,0.95);
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+      width: 100%;
+      max-width: 400px;
+      transform: none;
+    }
+    .hero-content h2 {
+      color: #0589bd;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .hero-content input, 
+    .hero-content select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .hero-content button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: #0589bd;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero-content button:hover {
+      background: #034661;
+      transform: translateY(-2px);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0589bd;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        padding: 15px;
+        font-size: 18px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }

@@ -1,0 +1,164 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0589bd;
+  padding: 15px 20px;
+  color: #fff;
+  position: relative;
+  font-size: 18px;       /* Increased font size */
+  font-weight: bold;     /* Bold text */
+}
+
+nav .logo {
+  font-size: 26px;       /* Bigger logo */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;    /* Rounded hover background */
+  transition: 0.3s;
+}
+
+/* Improved Hover Effect */
+nav ul li a:hover {
+  background-color: #034661; /* Hover color */
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Hero / Login Section */
+.hero {
+  height: 100vh;
+  background: url('../image/index.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: flex-end;  /* Start from right */
+  align-items: center;
+  padding-right: 200px;        /* Move form slightly more left */
+}
+
+/* Move form slightly up and left */
+.hero-content.login-box {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 400px;
+  transform: translate(-20px, -30px); /* Move left 20px, up 30px */
+}
+
+/* Login Form Text */
+.hero-content h2 {
+  color: #0589bd;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.hero-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Submit Button */
+.hero-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0589bd;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-content button:hover {
+  background: #034661;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;  /* Center form on small screens */
+    padding: 0 20px;
+  }
+
+  .hero-content.login-box {
+    width: 90%;
+    transform: none;          /* Remove shift on mobile */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0589bd;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

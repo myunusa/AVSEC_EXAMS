@@ -1,0 +1,69 @@
+    /*Container */
+    .login-box {
+      width: 350px;
+      margin: 40px auto 0; /* moves div a bit up */
+      margin-top:-100px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      height: 80vh;   /* responsive height */
+      max-height: 600px;
+    }
+
+    /*Sticky Image */
+    #img {
+      text-align: center;
+      margin-bottom: 5px;
+      flex-shrink: 0;
+    }
+    #profileDisplay {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      border: 3px solid #007bff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /*Scrollable inputs */
+    .form-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .form-body input, 
+    .form-body select {
+      display: block;
+      width: 95%;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /*Sticky button */
+    .form-footer {
+      flex-shrink: 0;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+
+    .form-footer button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form-footer button:hover {
+      background: #0056b3;
+    }

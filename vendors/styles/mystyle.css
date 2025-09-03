@@ -1,0 +1,394 @@
+
+/*--------------------------------------------------------------
+# pop Message
+--------------------------------------------------------------*/
+.error {
+  width: 100%; 
+  margin: 0px auto; 
+  margin-bottom: 10px;
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  background: #ffff !important; 
+  border-radius: 10px; 
+  text-align: center !important;
+  /* overflow: hidden !important; */
+}
+.error h6{
+  text-align: center !important; 
+  color: #a94442 !important; 
+}
+.success {
+  overflow: auto !important;
+  color: #3c763d !important; 
+  border: 2px solid #3c763d !important;
+}
+.success h3{
+  text-align: center !important; 
+  color: #3c763d !important; 
+}
+/*--------------------------------------------------------------
+# end pop Message
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.whatsapp1 {
+  padding: 0.375rem 0.75rem;
+}
+
+.whatsapp2 {
+  padding-top: 10px;
+}
+.whatsapp {
+  position: fixed;
+  right: 0px;
+  bottom: 15px;
+  background: #086b0d;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  transition: all 0.4s;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+.scroll_top {
+  position: fixed;
+  bottom: 15px;
+  background: #086b0d;
+  color: #fff !important;
+  cursor: pointer;
+  display: none;
+  transition: all 0.4s;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: #0e36b93b !important;
+}
+.whatsapp:hover {
+  background: #028008bb;
+  color: #fff;
+}
+.scroll_top:hover {
+  background: #03279efd !important;
+  color: #fff;
+}
+#main-container{
+	padding: 30px 10px 0px 10px;
+}
+#admit{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 80%;
+  overflow:auto;
+  }
+  #admit #img{
+  position: absolute;
+  pointer-events: none;
+  margin-top: 0px;
+  overflow: auto;
+  } 
+  #admit #admit-row{
+    position: relative;
+    z-index:1;
+    justify-content:flex-start;
+  }
+  #admit #admit-row #sign{
+    width: 80px;
+    height: 30px;
+  }
+  #admit #admit-row ol{
+    list-style: decimal; 
+    padding-left:20px;
+  }
+  #admit #admit-row ol li{
+    padding-bottom: 10px;
+  }
+ #admission_background{
+  background-image: url("../images/background/buk_background.jpg");
+  background-size: cover;
+ }
+ #profile{
+  width: 120px; 
+  height:120px; 
+  border-radius:70%; 
+  border: 3px solid #045caf; 
+  margin-bottom: 10px;
+ }
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+#bannersec{
+	margin-bottom: 120px;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;  
+  }
+  .banner{
+	width: 80%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  .banner video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+  } 
+ 
+  .banner .bannercontent{
+	position: relative;
+	z-index:1;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+  }
+  .banner .bannercontent h1{
+	margin: 0;
+	width: 95%;
+	margin-left: 290px;
+	padding: 0;
+	font-size: 3.0em;
+	text-transform: uppercase;
+	color: #fff;
+  }
+  
+  .banner .bannercontent p{
+    width: 95%;
+  	margin-left: 290px;
+	font-size: 2.0em;
+	color: #fff;
+  }
+  @media (min-width: 1024px) {
+	.bannersec {
+	  background-attachment: fixed;
+	}
+  }
+  @media (max-width: 768px) {
+	.bannersec h1 {
+	  font-size: 28px;
+	  line-height: 36px;
+	}
+	.bannersec h2 {
+	  font-size: 18px;
+	  line-height: 24px;
+	  margin-bottom: 30px;
+	}
+  }
+  
+/*--------------------------------------------------------------
+# route
+--------------------------------------------------------------*/
+.route .container .row{
+ text-align: center;
+}
+.route .container .route-wrap {
+  margin-left: 80px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(21, 21, 21, 0.6);
+}
+.route .container .route-wrap::before {
+  content: "";
+  background: #08316b86;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.route .container .route-wrap img {
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+  width: 100%;
+}
+.route .container .route-wrap:hover::before {
+  opacity: 1;
+}
+.route .container .route-wrap:hover img {
+  transform: scale(1.2);
+}
+.route .container .title {
+  margin-top: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #3c84c7;
+}
+
+.route .container .description {
+  text-align: left;
+  line-height: 24px;
+  font-size: 14px;
+}
+.h2_gallery{
+  margin-bottom: 20px;
+  color: #3c84c7;
+}
+
+.test_title{
+  text-align: center;
+  color: #040b72;
+}
+
+#form {
+  max-height: 30vh;
+  overflow: auto; 
+  margin-bottom: 20px;
+}
+#img {
+  text-align: center;
+}
+#img img{
+  width:100px; 
+  height:100px; 
+  border-radius:70%;  
+  margin-bottom: 10px;
+}
+#user-info{
+  background-color: #ffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  height: auto;
+  margin-bottom: 20px;
+}
+#user-info h4{
+  text-align: center;
+  text-transform:uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;;
+}
+#user-info ul li{
+  padding-bottom: 10px;
+  text-transform: capitalize !important;
+}
+    /* for Student or Staff */
+    @media screen and (max-width: 480px) {
+      .btn-radio {
+          display: block;
+          float: none;
+      }
+      .btn-radio:not(:first-child) {
+          margin-left: 0;
+          margin-top: 15px;
+      }
+  }
+  .btn-radio svg {
+      fill: none;
+      vertical-align: middle;
+  }
+  .btn-radio svg circle {
+      stroke-width: 2;
+      stroke: #083f6b;
+  }
+  .btn-radio svg path {
+      stroke: #1b00ff;
+  }
+  .btn-radio svg path.inner {
+      stroke-width: 6;
+      stroke-dasharray: 19;
+      stroke-dashoffset: 19;
+  }
+  .btn-radio svg path.outer {
+      stroke-width: 2;
+      stroke-dasharray: 57;
+      stroke-dashoffset: 57;
+  }
+  .btn-radio input {
+      display: none;
+  }
+  .btn-radio input:checked + svg path {
+      transition: all 0.4s ease;
+  }
+  .btn-radio input:checked + svg path.inner {
+      stroke-dashoffset: 38;
+      transition-delay: 0.3s;
+  }
+  .btn-radio input:checked + svg path.outer {
+      stroke-dashoffset: 0;
+  }
+  .hidden-container{
+    display: none;
+    }
+    #list{
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-radius: 30%;
+    }
+    #list ul{
+      align-items: center;
+      justify-content: center;
+    }
+      /* end of for one way or two way css */
+  
+      #payment-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        max-height: 45vh;
+        overflow: auto; 
+        }
+        #payment-detail img{
+        position: absolute;
+        pointer-events: none;
+        margin-top: 0px;
+        } 
+        #payment-detail #payment-row{
+          margin-top: 20px;
+          position: relative;
+          z-index:1;
+          justify-content:flex-start;
+          overflow: auto;
+        }
+        #payment-detail #payment-row h5{
+          color: #fff;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        } 
+        #payment-detail #payment-row p{
+          /* max-width: 70%; */
+          color: #fff;
+          font-size: 16px;
+          text-align: left;
+          padding: 5px;
+        }
+        #payment-detail #payment-row ul li{
+          color: #fff;
+          font-size: 18px;
+          text-align: left;padding: 10px;
+        }
+        @media (max-width: 768px) {
+          #payment-detail{
+            min-height: 30vh;
+            max-height: 30vh;
+            overflow: auto; 
+            margin-bottom: 100px;
+          }
+          #payment-detail #payment-row{
+            position: relative;
+            z-index:1;
+            justify-content:flex-start;
+          }
+          }

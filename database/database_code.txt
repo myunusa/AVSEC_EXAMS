@@ -1,0 +1,66 @@
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    role ENUM('Admin', 'Staff') NOT NULL,
+    name VARCHAR(50) NOT NULL,    
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL, -- store hashed password
+    added_byVARCHAR(50) NOT NULL
+);
+
+ Student Table
+CREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nimc_no  VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    phone_no VARCHAR(100) NOT NULL,
+    dob DATE NOT NULL,
+    gender ENUM('Male', 'Female') NOT NULL,
+    image VARCHAR(255) DEFAULT NULL
+);
+
+Exams for Registered Students
+CREATE TABLE student_exam (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nimc_no VARCHAR(50) NOT NULL,
+    exam_id VARCHAR(50) NOT NULL UNIQUE,
+    exam_type VARCHAR(100) NOT NULL,
+    exam_date DATE NOT NULL,
+    exam_time TIME NOT NULL,
+    exam_status VARCHAR(50) NOT NULL,
+    exam_score VARCHAR(50) NOT NULL,
+    percent VARCHAR(50) NOT NULL,
+    exam_remark VARCHAR(50) NOT NULL,
+    time_remain TIME NOT NULL,
+    FOREIGN KEY (nimc_no) REFERENCES student(nimc_no) ON DELETE CASCADE,
+    FOREIGN KEY (exam_type) REFERENCES exam_type(e_code) ON DELETE CASCADE
+);
+
+
+Exam Type Table
+CREATE TABLE exam_type (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    e_code VARCHAR(100) NOT NULL UNIQUE,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    duration TIME NOT NULL
+);
+
+Questions Table
+CREATE TABLE `$e_code` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question TEXT NOT NULL,
+    option1 VARCHAR(255) NOT NULL,
+    option2 VARCHAR(255) NOT NULL,
+    option3 VARCHAR(255) NOT NULL,
+    option4 VARCHAR(255) NOT NULL,
+    answer VARCHAR(255) NOT NULL,
+    image VARCHAR(255) DEFAULT NULL
+);
+
+
+CREATE TABLE questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_type VARCHAR(50) NOT NULL,
+    question TEXT NOT NULL,
+    image VARCHAR(255) DEFAULT NULL,  -- Optional image
+    FOREIGN KEY (exam_type) REFERENCES exam_type(name) ON DELETE CASCADE
+);
